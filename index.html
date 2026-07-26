@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Randomized Realms: Unleashed</title>
+
   <style>
     body {
       margin: 0;
@@ -15,15 +16,12 @@
       text-align: center;
       padding: 50px;
       background: linear-gradient(180deg, #1a001f, #0b0b0f);
-      <div style="margin-top: 20px;">
-  <button onclick="setLang('pt')" class="lang-btn">🇧🇷 PT</button>
-  <button onclick="setLang('en')" class="lang-btn">🇺🇸 EN</button>
-</div>
     }
 
     h1 {
       font-size: 40px;
       color: #c77dff;
+      margin-bottom: 10px;
     }
 
     .section {
@@ -40,9 +38,20 @@
       border: 1px solid #2a2a2a;
     }
 
-    a {
+    .lang-btn {
+      background: #1a001f;
+      border: 1px solid #c77dff;
       color: #c77dff;
-      text-decoration: none;
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .lang-btn:hover {
+      background: #c77dff;
+      color: black;
     }
   </style>
 </head>
@@ -51,38 +60,61 @@
 
 <header>
   <h1>Randomized Realms: Unleashed</h1>
-  <p>By Hollow</p>
+  <p>Created by: Hollow</p>
+
+  <div style="margin-top: 20px;">
+    <button onclick="setLang('pt')" class="lang-btn">🇧🇷 PT</button>
+    <button onclick="setLang('en')" class="lang-btn">🇺🇸 EN</button>
+  </div>
 </header>
 
 <div class="section">
-  <h2>🧩 About/Sobre</h2>
+
+  <h2>🧩 Sobre</h2>
   <div class="card">
-    <p>
-      [PT/BR]
+
+    <p id="sobre-pt">
       Desenvolvendo <b>Randomized Realms: Unleashed</b>, um mod de Minecraft
       com dimensões únicas, bosses customizados e mecânicas inovadoras.
-    <p>
-      [ENG/US]
-      Developing <b>Randomized Realms: Unleashed</b>, a Minecraft mod
-      featuring unique dimensions, custom bosses, and innovative mechanics.
     </p>
+
+    <p id="sobre-en" style="display:none;">
+      Developing <b>Randomized Realms: Unleashed</b>, a Minecraft mod
+      featuring unique dimensions, custom bosses and innovative mechanics.
+    </p>
+
   </div>
 
-  <h2>🔥 Main Project/Projeto Principal</h2>
+  <h2>🔥 Projeto Principal</h2>
   <div class="card">
+
     <h3>Randomized Realms: Unleashed</h3>
-    <p>
-      [PT/BR]
-      Um mod focado em exploração caótica, novas dimensões,
-      criaturas únicas, maquinário, armas novas e batalhas contra bosses insanos.
-    <p>
-      [ENG/US]
-      A mod focused on chaotic exploration, new dimensions,
-      unique creatures, machinery, new weapons, and intense boss battles.
+
+    <p id="proj-pt">
+      Um mod focado em exploração caótica, novas dimensões, criaturas únicas,
+      maquinário, armas novas e batalhas contra bosses insanos.
     </p>
+
+    <p id="proj-en" style="display:none;">
+      A mod focused on chaotic exploration, new dimensions, unique creatures,
+      machinery, new weapons and intense boss battles.
+    </p>
+
   </div>
 
 </div>
+
+<script>
+function setLang(lang) {
+  const pt = lang === 'pt';
+
+  document.getElementById('sobre-pt').style.display = pt ? 'block' : 'none';
+  document.getElementById('sobre-en').style.display = pt ? 'none' : 'block';
+
+  document.getElementById('proj-pt').style.display = pt ? 'block' : 'none';
+  document.getElementById('proj-en').style.display = pt ? 'none' : 'block';
+}
+</script>
 
 </body>
 </html>
