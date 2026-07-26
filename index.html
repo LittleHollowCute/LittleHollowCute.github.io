@@ -10,6 +10,21 @@
       font-family: Arial;
       background: #0b0b0f;
       color: #e0e0e0;
+      .nav-btn {
+  background: transparent;
+  border: 1px solid #c77dff;
+  color: #c77dff;
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #c77dff;
+  color: black;
+}
     }
 
     header {
@@ -60,9 +75,15 @@
 
 <header>
   <h1>Randomized Realms: Unleashed</h1>
-  <h2 id="proj-pt">Criado por: Hollow</h2>
-<h2 id="proj-en" style="display:none;">Created by: Hollow</h2>
+  <h2 id="creator-pt">Criado por: Hollow</h2>
+<h2 id="creator-en" style="display:none;">Created by: Hollow</h2>
 
+<nav>
+  <button onclick="showPage('main')" class="nav-btn">🏠 <span id="menu-main-pt">Menu Principal</span><span id="menu-main-en" style="display:none;">Main Menu</span></button>
+
+  <button onclick="showPage('sneak')" class="nav-btn">👀 <span id="menu-sneak-pt">Sneak Peeks</span><span id="menu-sneak-en" style="display:none;">Sneak Peeks</span></button>
+</nav>
+  
   <div style="margin-top: 20px;">
     <button onclick="setLang('pt')" class="lang-btn">🇧🇷 PT</button>
     <button onclick="setLang('en')" class="lang-btn">🇺🇸 EN</button>
@@ -72,7 +93,7 @@
 <div class="section">
 
   <h2 id="title-sobre-pt">🧩 Sobre</h2>
-<h2 id="title-sobre-en" style="display:none;">🧩 About</h2>
+  <h2 id="title-sobre-en" style="display:none;">🧩 About</h2>
   <div class="card">
 
     <p id="sobre-pt">
@@ -88,7 +109,7 @@
   </div>
 
   <h2 id="title-proj-pt">🔥 Projeto Principal</h2>
-<h2 id="title-proj-en" style="display:none;">🔥 Main Project</h2>
+  <h2 id="title-proj-en" style="display:none;">🔥 Main Project</h2>
   <div class="card">
 
     <h3>Randomized Realms: Unleashed</h3>
