@@ -98,7 +98,6 @@
   </div>
 </header>
 
-<!-- PAGINA PRINCIPAL -->
 <div id="page-main" class="section">
 
   <h2 id="title-sobre-pt">🧩 Sobre</h2>
@@ -135,7 +134,6 @@
 
 </div>
 
-<!-- PAGINA SNEAK PEEKS -->
 <div id="page-sneak" style="display:none;" class="section">
 
   <h2 id="sneak-pt">👀 Sneak Peeks</h2>
@@ -143,11 +141,11 @@
 
   <div class="card">
     <p id="sneak-text-pt">
-      Aqui você pode postar o desenvolvimento do mod, prints, ideias e novidades.
+      Nada foi postado ainda.
     </p>
 
     <p id="sneak-text-en" style="display:none;">
-      Here you can post mod development, screenshots, ideas and updates.
+      Nothing has been posted yet.
     </p>
   </div>
 
@@ -157,36 +155,30 @@
 function setLang(lang) {
   const pt = lang === 'pt';
 
-  // SOBRE
   document.getElementById('sobre-pt').style.display = pt ? 'block' : 'none';
   document.getElementById('sobre-en').style.display = pt ? 'none' : 'block';
 
-  // PROJETO
   document.getElementById('proj-pt').style.display = pt ? 'block' : 'none';
   document.getElementById('proj-en').style.display = pt ? 'none' : 'block';
 
-  // TITULOS
   document.getElementById('title-sobre-pt').style.display = pt ? 'block' : 'none';
   document.getElementById('title-sobre-en').style.display = pt ? 'none' : 'block';
 
   document.getElementById('title-proj-pt').style.display = pt ? 'block' : 'none';
   document.getElementById('title-proj-en').style.display = pt ? 'none' : 'block';
 
-  // MENU
   document.getElementById('menu-main-pt').style.display = pt ? 'inline' : 'none';
   document.getElementById('menu-main-en').style.display = pt ? 'none' : 'inline';
 
   document.getElementById('menu-sneak-pt').style.display = pt ? 'inline' : 'none';
   document.getElementById('menu-sneak-en').style.display = pt ? 'none' : 'inline';
 
-  // SNEAK
   document.getElementById('sneak-pt').style.display = pt ? 'block' : 'none';
   document.getElementById('sneak-en').style.display = pt ? 'none' : 'block';
 
   document.getElementById('sneak-text-pt').style.display = pt ? 'block' : 'none';
   document.getElementById('sneak-text-en').style.display = pt ? 'none' : 'block';
 
-  // CRIADOR
   document.getElementById('creator-pt').style.display = pt ? 'block' : 'none';
   document.getElementById('creator-en').style.display = pt ? 'none' : 'block';
 }
