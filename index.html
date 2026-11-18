@@ -172,10 +172,18 @@
       color: #d8ceef; font-size: .86rem;
     }
 
+    /* GALERIA ATUALIZADA */
     .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .work {
-      overflow: hidden; border-radius: 15px; border: 1px solid var(--line);
+      margin: 0;
+      overflow: hidden;
+      border-radius: 15px;
+      border: 1px solid var(--line);
       background: var(--panel);
+      transition: border-color .3s ease, transform .3s ease;
+    }
+    .work:hover {
+      border-color: rgba(182,156,255,.45);
     }
     .work-image {
       aspect-ratio: 4 / 3;
@@ -184,12 +192,24 @@
       background: #20232c;
       overflow: hidden;
       padding: 0;
+      color: var(--muted);
+      font-size: .85rem;
     }
     .work-image img {
       width: 100%;
       height: 100%;
       object-fit: contain;
       display: block;
+      image-rendering: pixelated;
+      transition: transform .35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    /* Reduz o tamanho visual de ícones/badges 2D dentro do card */
+    .work-image img.pixel-art {
+      padding: 28px;
+    }
+    /* Efeito de zoom ao passar o mouse */
+    .work:hover .work-image img {
+      transform: scale(1.12);
     }
     .work figcaption { padding: 15px 17px; font-size: .9rem; font-weight: 700; }
     .work figcaption small { display: block; color: var(--muted); font-weight: 400; margin-top: 3px; }
@@ -223,7 +243,6 @@
 <body>
   <header>
     <nav class="wrap">
-      <!-- Troque "SeuNome" pelo seu nome ou nome artístico -->
       <a class="brand" href="#inicio">HOL<span>LOW</span>.</a>
       <div class="nav-links">
         <a href="#sobre">Sobre</a>
@@ -246,7 +265,6 @@
           elementos prontos para fazer parte do seu projeto.
         </p>
         <div class="actions">
-          <!-- Substitua o link pelo seu contato -->
           <a class="button" href="https://discord.com/" target="_blank" rel="noopener">Entrar em contato ↗</a>
           <a class="button secondary" href="#portfolio">Ver trabalhos</a>
         </div>
@@ -338,12 +356,25 @@
           <p class="intro">Uma seleção de modelos e texturas que já produzi.</p>
         </div>
         <div class="gallery-grid">
-          <!-- Para adicionar uma imagem, substitua o conteúdo de .work-image por:
-               <img src="images/nome-do-arquivo.png" alt="Descrição do modelo">
-               Coloque a imagem na pasta "images" do repositório. -->
-          <figure class="work"><div class="work-image"><img src="images/sunwukong.png" alt="Modelo 3D Sun Wukong"></div><figcaption>Sun Wukong <small>Modelagem 3D</small></figcaption></figure>
-          <figure class="work"><div class="work-image"><img src="images/lgbtbadge.png" alt="LGBT BADGE"></div><figcaption>LGBT Badge <small>Texturização 2D</small></figcaption></figure>
-          <figure class="work"><div class="work-image">ADICIONE SUA IMAGEM 03</div><figcaption>Nome do projeto <small>Modelo e textura</small></figcaption></figure>
+          <figure class="work">
+            <div class="work-image">
+              <img src="images/sunwukong.png" alt="Modelo 3D Sun Wukong">
+            </div>
+            <figcaption>Sun Wukong <small>Modelagem 3D</small></figcaption>
+          </figure>
+
+          <figure class="work">
+            <div class="work-image">
+              <!-- A classe "pixel-art" reduz o tamanho da badge para caber melhor -->
+              <img class="pixel-art" src="images/lgbtbadge.png" alt="LGBT BADGE">
+            </div>
+            <figcaption>LGBT Badge <small>Texturização 2D</small></figcaption>
+          </figure>
+
+          <figure class="work">
+            <div class="work-image">ADICIONE SUA IMAGEM 03</div>
+            <figcaption>Nome do projeto <small>Modelo e textura</small></figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -356,7 +387,6 @@
             <h2>Tem uma ideia em mente?</h2>
             <p>Envie uma mensagem com a descrição do modelo que deseja. Vou analisar o pedido e informar o orçamento.</p>
           </div>
-          <!-- Troque o endereço abaixo pelo seu Discord, e-mail ou outro contato -->
           <a class="button" href="https://discord.com/" target="_blank" rel="noopener">Falar comigo ↗</a>
         </div>
       </div>
