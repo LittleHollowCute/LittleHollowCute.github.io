@@ -178,14 +178,19 @@
       background: var(--panel);
     }
     .work-image {
-      aspect-ratio: 4 / 3; display: grid; place-items: center;
-      background:
-        linear-gradient(135deg, rgba(182,156,255,.13), transparent 60%),
-        repeating-linear-gradient(45deg, #20232c 0 12px, #242833 12px 24px);
-      color: #aaa1c4; font: 500 .75rem 'DM Mono', monospace;
-      text-align: center; padding: 15px;
+      aspect-ratio: 4 / 3;
+      display: grid;
+      place-items: center;
+      background: #20232c;
+      overflow: hidden;
+      padding: 0;
     }
-    .work-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .work-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
     .work figcaption { padding: 15px 17px; font-size: .9rem; font-weight: 700; }
     .work figcaption small { display: block; color: var(--muted); font-weight: 400; margin-top: 3px; }
 
@@ -219,7 +224,7 @@
   <header>
     <nav class="wrap">
       <!-- Troque "SeuNome" pelo seu nome ou nome artístico -->
-      <a class="brand" href="#inicio">SEU<span>NOME</span>.</a>
+      <a class="brand" href="#inicio">HOL<span>LOW</span>.</a>
       <div class="nav-links">
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
@@ -336,7 +341,7 @@
           <!-- Para adicionar uma imagem, substitua o conteúdo de .work-image por:
                <img src="images/nome-do-arquivo.png" alt="Descrição do modelo">
                Coloque a imagem na pasta "images" do repositório. -->
-          <figure class="work"><div class="work-image"><img src="images/sunwukong.png"></div><figcaption>Nome do modelo <small>Modelagem 3D</small></figcaption></figure>
+          <figure class="work"><div class="work-image"><img src="images/sunwukong.png" alt="Modelo 3D Sun Wukong"></div><figcaption>Nome do modelo <small>Modelagem 3D</small></figcaption></figure>
           <figure class="work"><div class="work-image">ADICIONE SUA IMAGEM 02</div><figcaption>Nome da textura <small>Texturização 2D</small></figcaption></figure>
           <figure class="work"><div class="work-image">ADICIONE SUA IMAGEM 03</div><figcaption>Nome do projeto <small>Modelo e textura</small></figcaption></figure>
         </div>
@@ -360,7 +365,7 @@
 
   <footer>
     <div class="wrap">
-      <span>© 2026 SeuNome — Minecraft Modeler & Texturizer</span>
+      <span>© 2026 Hollow — Minecraft Modeler & Texturizer</span>
       <span>Feito para Minecraft Java Edition.</span>
     </div>
   </footer>
